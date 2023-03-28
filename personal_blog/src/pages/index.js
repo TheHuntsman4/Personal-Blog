@@ -26,7 +26,7 @@ export default function Home({posts}) {
             <Categories />
           </div>
         </div>
-          
+          <Footer />
           </div>
           
     </div>
