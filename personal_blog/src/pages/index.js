@@ -28,7 +28,7 @@ export default function Home({posts}) {
         </div>
           
           </div>
-          <Footer />
+          
     </div>
   )
 }
