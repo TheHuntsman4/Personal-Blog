@@ -18,7 +18,6 @@ const Header = () => {
         <div className="md:float-left block">
           <Link href="/">
             <span className="cursor-pointer font-bold text-4xl text-white">Welcome to my blog</span>
-            {/* <span className='text-white'>      hello</span> */}
           </Link>
         </div>
         <div className="hidden md:float-left md:contents">
