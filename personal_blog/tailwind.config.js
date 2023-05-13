@@ -6,7 +6,11 @@ module.exports = {
 
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        Special:["Special Elite","cursive"],
+      },
+    },
   },
   plugins: [],
 }

@@ -276,3 +276,13 @@
     transform: rotate(0deg);
   }
 }
+
+.post_details::before,.post_details::after{
+  background: url(//s.ytimg.com/yt/imgbin/www-refreshbg-vflC3wnbM.png) 0;
+  box-shadow: 0.5rem;
+  border-radius: 0.5rem;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  -webkit-clip-path: polygon(1% 0%, 4% 100%, 9% 0%, 13% 100%, 19% 1%, 21% 100%, 26% 5%, 30% 100%, 36% 2%, 43% 100%, 50% 1%, 52% 100%, 61% 0%, 69% 94%, 70% 0%, 76% 100%, 81% 0%, 84% 100%, 91% 0%, 97% 100%, 99% 3%);
+
+}
