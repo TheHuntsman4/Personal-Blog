@@ -6,7 +6,7 @@ const PostCard = ({post}) => {
   console.log(post)
   
   return (
-    <div className='bg-[#e4dcc9] font-Special shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
+    <div className='bg-[#0f0d49] font-Special shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
       <div className='relative overflow-hidden shadow-md pb-80 mb-6'>
         <img
         src={post.featuredImage.url}
@@ -14,7 +14,7 @@ const PostCard = ({post}) => {
         className='object-top absolute h-full w-full object-cover rounded-lg shadow-lg rounded-t-lg:rounded-lg'
         />
       </div>
-      <h1 className=" text-center text-[3rem] cursor-pointer text-3xl font-black py-[1rem]">
+      <h1 className=" text-center text-[3rem] cursor-pointer text-3xl text-white font-Roboto py-[1rem]">
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
@@ -30,8 +30,8 @@ const PostCard = ({post}) => {
 
         </div> */}
       </div>
-      <div className='px-[2rem]'>
-      <p classname='align-center font-mono text-[10rem] pl-[2rem] lg:px-20 '>{post.excerpt}</p>
+      <div className='px-[2rem] text-white font-Roboto'>
+      <p classname='align-center text-white font-Roboto text-[10rem] pl-[2rem] lg:px-20 '>{post.excerpt}</p>
       </div>
       <div className="text-right mb-3 mr-4">
       <Link href={`/post/${post.slug}`}>

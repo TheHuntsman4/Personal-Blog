@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily:{
         Special:["Special Elite","cursive"],
+        Roboto:['Roboto Mono', "monospace"],
       },
     },
   },
