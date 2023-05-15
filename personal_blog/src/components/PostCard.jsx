@@ -11,30 +11,31 @@ const PostCard = ({post}) => {
         <img
         src={post.featuredImage.url}
         alt={post.title}
-        className='object-top absolute h-full w-full object-cover shadow-lg rounded-t-lg:rounded-lg'
+        className='object-top absolute h-full w-full object-cover rounded-lg shadow-lg rounded-t-lg:rounded-lg'
         />
       </div>
-      <h1 className="transition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-black">
+      <h1 className=" text-center text-[3rem] cursor-pointer text-3xl font-black py-[1rem]">
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
-        <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-automr-8  '>
+        {/* <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8 '>
 
          <img
           src={post.author.photo.url}
-          heigth="30px"
-          width="30px"
-          />
+          heigth="100px"
+          width="100px"
+          className='rounded-full'/>
           <p className='inline align-center font-black text-semibold ml-8'>{post.author.name}</p>
         
 
-        </div>
+        </div> */}
       </div>
-      <p classname='align-center font-mono text-lg px-4 lg:px-20 mb-8 ml-8'>{post.excerpt}</p>
-      
+      <div className='px-[2rem]'>
+      <p classname='align-center font-mono text-[10rem] pl-[2rem] lg:px-20 '>{post.excerpt}</p>
+      </div>
       <div className="text-right mb-3 mr-4">
       <Link href={`/post/${post.slug}`}>
-        <span className='transition duration-500 text-center inline-block bg-blue-600 rounded-full cursor-pointer hover:text-white-500 px-8 py-3'>Continue Reading
+        <span className='transition duration-500 font-semibold text-[#e4dcc9] text-center inline-block bg-[#4A2C29] rounded-full cursor-pointer hover:text-white-500 px-8 py-3'>Continue Reading
         </span></Link>
        </div> 
     </div>

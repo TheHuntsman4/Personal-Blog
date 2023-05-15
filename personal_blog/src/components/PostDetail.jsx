@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Home.module.css'
 
 import moment from 'moment';
+import Image from 'next/image';
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -25,12 +26,12 @@ const PostDetail = ({ post }) => {
       case 'heading-three':
         return <h3 key={index} className="text-xl text-[#24221b] font-semibold mb-4 font-Special">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'paragraph':
-        return <p key={index} className="mb-8 text-[1.2rem] text-[#24221b] font-Special">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+        return <p key={index} className="mb-8 text-[1.4rem] text-[#24221b] font-Special">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4 font-Special text-[#24221b]">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
         return (
-          <img
+          <Image
             key={index}
             alt={obj.title}
             height={obj.height}
@@ -48,15 +49,15 @@ const PostDetail = ({ post }) => {
     <div className='mx-auto w-3/4'>
       <div className="bg-[#e4dcc9] shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
-          <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
+          <Image src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
         <div className="px-4 lg:px-0">
           <div className="flex items-center mb-8 w-full">
             <div className="hidden md:flex justify-center lg:mb-0 lg:w-auto mr-8 items-center">
-              <img
+              <Image
                 alt={post.author.name}
-                height="30px"
-                width="30px"
+                height="30"
+                width="30"
                 className="align-middle rounded-full"
                 src={post.author.photo.url}
               />

@@ -32,12 +32,10 @@ const PostWidget = ({ categories, slug }) => {
           <div className="w-16 flex-none">
             <Image
               loader={ImageLoader}
-
               alt={post.title}
               height="60"
               width="60"
-              
-              className="align-middle rounded-full"
+              className="rounded-full"
               src={post.featuredImage.url}
             />
           </div>
