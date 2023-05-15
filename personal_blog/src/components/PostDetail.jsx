@@ -49,15 +49,15 @@ const PostDetail = ({ post }) => {
     <div className='mx-auto w-3/4'>
       <div className="bg-[#e4dcc9] shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
-          <Image src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
+          <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
         <div className="px-4 lg:px-0">
           <div className="flex items-center mb-8 w-full">
             <div className="hidden md:flex justify-center lg:mb-0 lg:w-auto mr-8 items-center">
-              <Image
+              <img
                 alt={post.author.name}
-                height="30"
-                width="30"
+                height="30px"
+                width="30px"
                 className="align-middle rounded-full"
                 src={post.author.photo.url}
               />
