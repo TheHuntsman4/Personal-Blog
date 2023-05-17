@@ -10,6 +10,7 @@ module.exports = {
       fontFamily:{
         Special:["Special Elite","cursive"],
         Roboto:['Roboto Mono', "monospace"],
+        Moorley:"Moorley",
       },
     },
   },

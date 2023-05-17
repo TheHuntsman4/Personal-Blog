@@ -7,4 +7,3 @@ export {default as PostDetail} from './PostDetail';
 export {default as Author} from './Author';
 export {default as Loader} from './Loader';
 export {default as Footer} from './Footer'
-// test comment
