@@ -31,7 +31,7 @@ const PostDetail = ({ post }) => {
         return <h2 key={index} className="text-2xl font-semibold mb-4 font-Roboto text-[#ffffff]">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
       case 'image':
         return (
-          <Image
+          <img
             key={index}
             alt={obj.title}
             height={obj.height}

@@ -31,7 +31,7 @@ const PostCard = ({post}) => {
         </div> */}
       </div>
       <div className='px-[2rem] text-white font-Roboto'>
-      <p classname='align-center text-white font-Roboto text-[10rem] pl-[2rem] lg:px-20 '>{post.excerpt}</p>
+      <p className='align-center text-white font-Roboto text-[1.2rem] pl-[2rem] lg:px-20 '>{post.excerpt}</p>
       </div>
       <div className="text-right mb-3 mr-4">
       <Link href={`/post/${post.slug}`}>

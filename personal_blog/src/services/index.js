@@ -85,6 +85,9 @@ export const getCategories=async()=>{
       categories{
         category
         slug
+        categoryImage{
+          url
+        }
       }
     }`
     const result=await request(graphqlAPI,query);
