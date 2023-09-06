@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getCategories } from '../services';
 
+
 const Header = () => {
+
+
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -12,7 +15,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-10 mb-8">
+    <div className="container mx-auto px-10 mb-8 md:overflow-x-hidden">
       <div className="border-b w-full inline-block border-white py-8">
         <div className="md:float-left block">
           <Link href="/">
@@ -24,7 +27,7 @@ const Header = () => {
             <>
 
             <Link key={index} href={`/category/${category.slug}`}>
-              <span className="transition duration-200 md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer hover:scale-125 ">
+              <span className="transition duration-200 md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer hover:scale-125 " >
               <img src={category.categoryImage.url} className='inline mx-[0.5rem] text-white' height={"30px"} width={"30px"} />
               {category.category}
               </span>
