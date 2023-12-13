@@ -34,7 +34,6 @@ export const getPosts = async () => {
   `;
 
   const result = await request(graphqlAPI, query);
-  console.log(result);
   const posts= result.postsConnection.edges;
   const revPosts=posts.reverse();
   return revPosts;
