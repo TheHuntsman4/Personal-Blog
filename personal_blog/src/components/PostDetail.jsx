@@ -33,13 +33,36 @@ const PostDetail = ({ post }) => {
           </h3>
         );
       case "paragraph":
-        return (
-          <p key={index} className="mb-8 text-[1.2rem] text-black font-Roboto">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </p>
-        );
+        if (obj && obj.children && Array.isArray(obj.children)) {
+          const linkObj = obj.children.find(
+            (child) => child.type === "link" && child.href
+          );
+
+          if (linkObj) {
+            const href =
+              linkObj.href.startsWith("http://") ||
+              linkObj.href.startsWith("https://")
+                ? linkObj.href
+                : `http://${linkObj.href}`;
+            console.log("This is the linkObj object", linkObj);
+            return (
+              <a href={href} target="_blank">
+                {linkObj.children[0].text}
+              </a>
+            );
+          }
+        } else {
+          return (
+            <p
+              key={index}
+              className="mb-8 text-[1.2rem] text-black font-Roboto"
+            >
+              {modifiedText.map((item, i) => (
+                <React.Fragment key={i}>{item}</React.Fragment>
+              ))}
+            </p>
+          );
+        }
       case "heading-four":
         return (
           <h4
